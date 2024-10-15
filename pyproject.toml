@@ -1,0 +1,49 @@
+[tool.poetry]
+name = "enki-eval"
+version = "0.1.0"
+description = ""
+authors = ["Edward Brandler <brandler@extrasensory.co>"]
+readme = "README.md"
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.12"
+datasets = "^3.0.1"
+openai = "^1.51.0"
+anthropic = "^0.35.0"
+scikit-learn = "^1.5.2"
+polars = "^1.9.0"
+duckdb = "^1.1.1"
+llama-cpp-python = "^0.3.1"
+types-tqdm = "^4.66.0.20240417"
+types-requests = "^2.32.0.20240914"
+
+[tool.poetry.group.dev.dependencies]
+black = "^24.8.0"
+ruff = "^0.6.9"
+mypy = "^1.11.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.mypy]
+disallow_incomplete_defs = "false"
+disallow_untyped_defs = "false"
+strict = "true"
+pretty = "true"
+warn_return_any = "true"
+warn_unused_configs = "true"
+warn_redundant_casts = "true"
+warn_unused_ignores = "true"
+ignore_missing_imports = "true"
+no_implicit_reexport = "true"
+strict_optional = "true"
+strict_equality = "true"
+extra_checks = "true"
+check_untyped_defs = "true"
+disallow_subclassing_any = "true"
+disallow_untyped_decorators = "true"
+disallow_untyped_calls = "false"
+disallow_any_generics = "true"
+follow_imports = "silent"
